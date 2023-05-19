@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "server update hook was triggered"
+exit 0
