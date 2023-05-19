@@ -1,0 +1,21 @@
+apiVersion: skaffold/v2beta27
+kind: Config
+build:
+  artifacts:
+  - image: registry.in.hoorayman.cn:38988/media/oauth-sidecar-operator
+    docker:
+      dockerfile: build/package/debug.Dockerfile
+  tagPolicy:
+    sha256: {}
+  local:
+    useDockerCLI: true
+    useBuildkit: true
+deploy:
+  kubectl:
+    manifests:
+    - ./deployments/kubernetes/deploy.dev.yaml
+profiles:
+- name: dockerfile
+  build:
+    artifacts:
+    - image: registry.in.hoorayman.cn:38988/media/oauth-sidecar-operator

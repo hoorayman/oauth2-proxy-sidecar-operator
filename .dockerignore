@@ -1,0 +1,10 @@
+deployments
+build
+githooks
+docs
+.gitlab-ci.yml
+README.md
+skaffold.yaml
+vendor
+.git
+.idea

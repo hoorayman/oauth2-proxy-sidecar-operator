@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "commit-msg hook was triggered"
+exit 0
+
+# Verify the commit log format
+# hooks-cli logCheck "$@"
+# [ "$?" != 0 ] && exit 1
